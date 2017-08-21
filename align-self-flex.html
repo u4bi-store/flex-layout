@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> align self flex </title>
+        <style>
+            .wrapper{
+                display: flex;
+
+                flex-direction: row;
+
+                justify-content: center;
+                
+                align-items: center;
+
+                border: 1px solid blue;
+
+                height: 100px;
+            }
+
+            .box{
+                border: 1px solid red;
+            }
+
+            .a {
+                align-self : flex-start; /* default */
+            }
+
+            .b {
+                align-self : flex-end;
+            }
+
+            .c {
+                align-self : center;
+            }
+
+            .d {
+                align-self : baseline;
+            }                                    
+
+            .e {
+                align-self : stretch;
+            }
+                         
+        </style>
+    </head> 
+    <body>
+        <div class="wrapper">
+
+            <div class="box a">A</div>
+            <div class="box b">B</div>
+            <div class="box c">C</div>
+            <div class="box d">D</div>
+            <div class="box e">E</div>
+
+        </div>
+    </body>
+</html>

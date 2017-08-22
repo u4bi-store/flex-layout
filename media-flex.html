@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> media flex </title>
+        <style>
+            .wrapper{
+                display: flex;
+                flex-flow: row wrap;
+
+                border: 1px solid blue;
+            }
+
+            .box{
+                border: 1px solid red;
+            }
+
+            /* 아래 영역에 너비 100프로 지정 */
+            .header, .main, .nav, .aside, .footer {
+                flex: 1 100%;
+            }
+            
+
+            @media (min-width: 500px) {
+                /* 양 사이드 클래스 비율 자율 조정 */
+                .aside { 
+                    flex: 1 auto;
+                }
+            }
+
+            @media (min-width: 760px) {
+                .main { 
+                    flex: 2 0px;
+                }
+                
+                .aside-1 { order: 1; }
+                .main    { order: 2; }
+                .aside-2 { order: 3; }
+                .footer  { order: 4; }
+            }                    
+                        
+            
+        </style>
+    </head> 
+    <body>
+        <div class="wrapper">
+            
+            <header class="box header">헤더</header>
+            
+            <article class="box main">
+                
+                <p>
+                    메인 컨텐츠가 들어갈 영역입니다. 메인 컨텐츠가 들어갈 영역입니다. 메인 컨텐츠가 들어갈 영역입니다. 메인 컨텐츠가 들어갈 영역입니다. 메인 컨텐츠가 들어갈 영역입니다.
+                </p>
+                
+            </article>
+            
+            <aside class="box aside aside-1">사이드 1</aside>
+            <aside class="box aside aside-2">사이드 2</aside>
+            
+            <footer class="box footer">푸터</footer>
+        </div>
+
+    </body>
+</html>
